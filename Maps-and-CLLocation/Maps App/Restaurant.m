@@ -1,8 +1,8 @@
 
 
-#import "MyAnnotationClass.h"
+#import "Restaurant.h"
 
-@implementation MyAnnotationClass
+@implementation Restaurant
 
 - (id _Nullable )initWithCoordinate:(CLLocationCoordinate2D)aCoordinate andTitle:(NSString * _Nullable)aTitle andSubtitle:(NSString * _Nullable)aSubtitle;
 {

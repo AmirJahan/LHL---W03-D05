@@ -15,7 +15,7 @@
 		29FAAC291F9D855D00546CB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29FAAC271F9D855D00546CB7 /* LaunchScreen.storyboard */; };
 		29FAAC2C1F9D855D00546CB7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FAAC2B1F9D855D00546CB7 /* main.m */; };
 		29FAAC331F9D8C8800546CB7 /* lhlLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 29FAAC321F9D8C8300546CB7 /* lhlLogo.png */; };
-		29FAAC361F9D8EF500546CB7 /* MyAnnotationClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FAAC351F9D8EF500546CB7 /* MyAnnotationClass.m */; };
+		29FAAC361F9D8EF500546CB7 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FAAC351F9D8EF500546CB7 /* Restaurant.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +31,8 @@
 		29FAAC2A1F9D855D00546CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29FAAC2B1F9D855D00546CB7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29FAAC321F9D8C8300546CB7 /* lhlLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lhlLogo.png; sourceTree = "<group>"; };
-		29FAAC341F9D8EF500546CB7 /* MyAnnotationClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAnnotationClass.h; sourceTree = "<group>"; };
-		29FAAC351F9D8EF500546CB7 /* MyAnnotationClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAnnotationClass.m; sourceTree = "<group>"; };
+		29FAAC341F9D8EF500546CB7 /* Restaurant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Restaurant.h; sourceTree = "<group>"; };
+		29FAAC351F9D8EF500546CB7 /* Restaurant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +70,8 @@
 				29FAAC1D1F9D855D00546CB7 /* AppDelegate.m */,
 				29FAAC1F1F9D855D00546CB7 /* ViewController.h */,
 				29FAAC201F9D855D00546CB7 /* ViewController.m */,
-				29FAAC341F9D8EF500546CB7 /* MyAnnotationClass.h */,
-				29FAAC351F9D8EF500546CB7 /* MyAnnotationClass.m */,
+				29FAAC341F9D8EF500546CB7 /* Restaurant.h */,
+				29FAAC351F9D8EF500546CB7 /* Restaurant.m */,
 				29FAAC221F9D855D00546CB7 /* Main.storyboard */,
 				297DEB5920937CDC00344EB1 /* pin.png */,
 				29FAAC251F9D855D00546CB7 /* Assets.xcassets */,
@@ -156,7 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29FAAC211F9D855D00546CB7 /* ViewController.m in Sources */,
-				29FAAC361F9D8EF500546CB7 /* MyAnnotationClass.m in Sources */,
+				29FAAC361F9D8EF500546CB7 /* Restaurant.m in Sources */,
 				29FAAC2C1F9D855D00546CB7 /* main.m in Sources */,
 				29FAAC1E1F9D855D00546CB7 /* AppDelegate.m in Sources */,
 			);

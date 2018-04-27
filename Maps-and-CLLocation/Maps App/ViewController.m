@@ -1,5 +1,5 @@
 #import "ViewController.h"
-#import "MyAnnotationClass.h"
+#import "Restaurant.h"
 
 
 
@@ -24,6 +24,8 @@
      delegation
      Region (center and ho / ve)
      */
+    
+    
     _myMapView.mapType = MKMapTypeStandard;
     [_myMapView setZoomEnabled: true];
     [_myMapView setRotateEnabled:true];
@@ -62,39 +64,48 @@
      */
     
     
-    
     MKPointAnnotation *myAnnotation = [[MKPointAnnotation alloc]init];
-    myAnnotation.coordinate = CLLocationCoordinate2DMake(49.281838, -123.108151);
+    
+    myAnnotation.coordinate = CLLocationCoordinate2DMake(49.281838,
+                                                         -123.108151);
+    
     [myAnnotation setTitle:@"LHL"];
     [myAnnotation setSubtitle:@"Where we currently are"];
     [_myMapView addAnnotation: myAnnotation];
     
     
-    
+    // array of annotations!
     
     //    [_myMapView addAnnotations:<#(nonnull NSArray<id<MKAnnotation>> *)#>];
     // _myMapView showAnnotations:<#(nonnull NSArray<id<MKAnnotation>> *)#> animated:<#(BOOL)#>
     
     
     
-    MyAnnotationClass *myAnn = [MyAnnotationClass new];
-    myAnn = [[MyAnnotationClass alloc] initWithCoordinate:CLLocationCoordinate2DMake(49.260675, -123.247153)
-                                                 andTitle:@"UBC"
-                                              andSubtitle:@"Where I lost my bike"];
-    [_myMapView addAnnotation: myAnn];
+    Restaurant *subWay;
+    subWay = [[Restaurant alloc] initWithCoordinate:CLLocationCoordinate2DMake(49.260675,
+                                                                               -123.247153)
+                                           andTitle:@"UBC"
+                                        andSubtitle:@"Where I lost my bike"];
+    [_myMapView addAnnotation: subWay];
 }
 
 
 
 
 
-- (IBAction)goThereAction:(id)sender {
+- (IBAction)goThereAction:(id)sender
+{
+    
+    // map view to set to a region // scroll view scroll to visible
+    // region we get by a coordinate and
     
     MKCoordinateRegion myRegion;
     
     // CLLocationCoordinate2D:  The latitude and longitude associated with a location
     
-    CLLocationCoordinate2D myCen = CLLocationCoordinate2DMake(49.281838, -123.108151);
+    CLLocationCoordinate2D myCen = CLLocationCoordinate2DMake(49.281838,
+                                                              -123.108151);
+    
     myRegion = MKCoordinateRegionMakeWithDistance(myCen, 500, 500);
     
     [_myMapView setRegion:myRegion animated:true];
@@ -153,47 +164,43 @@
 
 
 //
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+- (MKAnnotationView *)mapView:(MKMapView *)mapView
+            viewForAnnotation:(id <MKAnnotation>)annotation
 {
     // MK Annotation View
+//
+//    MKAnnotationView *anyView;
+//    if ([annotation isKindOfClass:[MKPointAnnotation class]])
+//    {
+//        //////// VIEW
+//        anyView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"pinId"];
+//        if (!anyView)
+//        {
+//            // If an existing pin view was not available, create one.
+//            anyView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pinId"];
+//            anyView.canShowCallout = YES;
+//            anyView.image = [UIImage imageNamed:@"pin.png"];
+//            anyView.calloutOffset = CGPointMake(0, -32);
+//            UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+//            anyView.rightCalloutAccessoryView = rightButton;
+//
+//            // Add an image to the left callout.
+//            UIImageView *iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lhlLogo.png"]];
+//            anyView.leftCalloutAccessoryView = iconView;
+//        }
+//        else
+//        {
+//            anyView.annotation = annotation;
+//        }
+//    }
+//    return anyView;
+//
     
     
-    MKAnnotationView *anyView;
-    if ([annotation isKindOfClass:[MKPointAnnotation class]])
-    {
-        //////// VIEW
-        anyView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"pinId"];
-        if (!anyView)
-        {
-            // If an existing pin view was not available, create one.
-            anyView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pinId"];
-            anyView.canShowCallout = YES;
-             anyView.image = [UIImage imageNamed:@"pin.png"];
-            
-            
-            
-            anyView.calloutOffset = CGPointMake(0, -32);
-            
-            UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-            anyView.rightCalloutAccessoryView = rightButton;
-            
-            // Add an image to the left callout.
-            UIImageView *iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lhlLogo.png"]];
-            anyView.leftCalloutAccessoryView = iconView;
-        }
-        else
-        {
-            anyView.annotation = annotation;
-        }
-    }
-    return anyView;
     
-     
+    //    //////// PIN
     
-
-     //    //////// PIN
     
-    /*
      MKPinAnnotationView *pinView = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"myId"];
      if (!pinView)
      {
@@ -202,7 +209,7 @@
      pinView.canShowCallout = YES;
      pinView.pinTintColor = [UIColor greenColor];
      pinView.image = [UIImage imageNamed:@"pin.png"];
-
+     
      UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
      pinView.rightCalloutAccessoryView = rightButton;
      
@@ -213,8 +220,6 @@
      
      }
      return pinView;
-     */
-    
 }
 
 
