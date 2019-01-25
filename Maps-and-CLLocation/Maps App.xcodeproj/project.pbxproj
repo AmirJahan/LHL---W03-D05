@@ -65,7 +65,6 @@
 		29FAAC1B1F9D855D00546CB7 /* Maps App */ = {
 			isa = PBXGroup;
 			children = (
-				29FAAC321F9D8C8300546CB7 /* lhlLogo.png */,
 				29FAAC1C1F9D855D00546CB7 /* AppDelegate.h */,
 				29FAAC1D1F9D855D00546CB7 /* AppDelegate.m */,
 				29FAAC1F1F9D855D00546CB7 /* ViewController.h */,
@@ -73,6 +72,7 @@
 				29FAAC341F9D8EF500546CB7 /* Restaurant.h */,
 				29FAAC351F9D8EF500546CB7 /* Restaurant.m */,
 				29FAAC221F9D855D00546CB7 /* Main.storyboard */,
+				29FAAC321F9D8C8300546CB7 /* lhlLogo.png */,
 				297DEB5920937CDC00344EB1 /* pin.png */,
 				29FAAC251F9D855D00546CB7 /* Assets.xcassets */,
 				29FAAC271F9D855D00546CB7 /* LaunchScreen.storyboard */,

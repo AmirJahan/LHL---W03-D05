@@ -1,4 +1,3 @@
-
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
@@ -8,6 +7,8 @@
 @property (nonatomic, readonly, copy, nullable) NSString *title;
 @property (nonatomic, readonly, copy, nullable) NSString *subtitle;
 
-- (id _Nullable )initWithCoordinate:(CLLocationCoordinate2D)aCoordinate andTitle:(NSString * _Nullable)aTitle andSubtitle:(NSString * _Nullable)aSubtitle;
+- (id _Nullable )initWithCoordinate:(CLLocationCoordinate2D)aCoordinate
+                           andTitle:(NSString * _Nullable)aTitle
+                        andSubtitle:(NSString * _Nullable)aSubtitle;
 
 @end
